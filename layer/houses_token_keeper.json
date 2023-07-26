@@ -106,7 +106,7 @@
           "isSigner": false
         },
         {
-          "name": "stakePdaTokenAccount",
+          "name": "stakeTokenAccount",
           "isMut": true,
           "isSigner": false
         },
@@ -172,11 +172,11 @@
         },
         {
           "name": "stakePda",
-          "isMut": false,
+          "isMut": true,
           "isSigner": false
         },
         {
-          "name": "stakePdaTokenAccount",
+          "name": "stakeTokenAccount",
           "isMut": true,
           "isSigner": false
         },
@@ -201,6 +201,77 @@
           "type": "u64"
         }
       ]
+    },
+    {
+      "name": "claimReward",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "stakeProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "stakePda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "dataPda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rewardTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userRewardTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userPda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "email",
+          "type": "string"
+        }
+      ]
     }
   ],
   "accounts": [
@@ -216,5 +287,8 @@
         ]
       }
     }
-  ]
+  ],
+  "metadata": {
+    "address": "7T3CM2YhJMRQyVRCqY2ShaZydzHCCDBZUTyXzXGnJ3Wh"
+  }
 }

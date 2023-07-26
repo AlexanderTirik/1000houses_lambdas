@@ -30,9 +30,9 @@ export const handler = async (event) => {
   const userPdaTokenAccount = await getTokenAccount(userPda, true);
 
   const stakePda = await getStakePda(email);
-  const stakePdaTokenAccount = await getTokenAccount(stakePda, true);
 
   const dataPda = await getDataPda();
+  const stakeTokenAccount = await getTokenAccount(dataPda, true);
 
   await tokenKeeperProgram.methods
     .unstake(email, new BN(amount))
@@ -45,7 +45,7 @@ export const handler = async (event) => {
       userPda,
       userPdaTokenAccount: userPdaTokenAccount.address,
       stakePda,
-      stakePdaTokenAccount: stakePdaTokenAccount.address,
+      stakeTokenAccount: stakeTokenAccount.address,
       dataPda,
       authority: payer.publicKey,
     })
