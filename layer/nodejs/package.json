@@ -1,0 +1,14 @@
+{
+  "name": "layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.27.0",
+    "@solana/spl-token": "^0.3.7"
+  }
+}
