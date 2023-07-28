@@ -349,6 +349,10 @@
             "type": "u64"
           },
           {
+            "name": "previousStacked",
+            "type": "u64"
+          },
+          {
             "name": "isStackingFreezed",
             "type": "bool"
           },
@@ -357,18 +361,18 @@
             "type": "u8"
           },
           {
-            "name": "currentRewardIndex",
-            "type": "u8"
+            "name": "reward",
+            "type": "u64"
           },
           {
-            "name": "currentReward",
-            "type": "u64"
+            "name": "rewardIndex",
+            "type": "u8"
           }
         ]
       }
     }
   ],
   "metadata": {
-    "address": "Ezy2MxpDoPvaRB7fPq32vgFXiZHcKsX3TEd7d7WFPFm7"
+    "address": "3A6KoMNEqphcqdLJvifU2dxWxbkQVpFWZgRCjGGpt776"
   }
 }

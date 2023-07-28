@@ -12,15 +12,19 @@ const payerPublicKey = new web3.PublicKey(
 );
 
 export const stakeProgramAdress = new web3.PublicKey(
-  'Ezy2MxpDoPvaRB7fPq32vgFXiZHcKsX3TEd7d7WFPFm7'
+  'HcKTgUbL976hsP7ie2LYLC92DFWcE6z4LSnjshC6hgcF'
 );
 
 const tokenKeeperProgramAdress = new web3.PublicKey(
-  '7T3CM2YhJMRQyVRCqY2ShaZydzHCCDBZUTyXzXGnJ3Wh'
+  'BnHCabsYvwUPEkd22RMbk2y5g8XSgbhU435yGVik12vc'
 );
 
 export const tokenMint = new web3.PublicKey(
   '7Z7FPs9tM3k9zVyWuKCfJ8g4D54qaKTdx942hkxc7qii'
+);
+
+export const rewardMint = new web3.PublicKey(
+  'DKgvB5LHdG7DUreqER5vNzySDwZfqzMamxe2KBTNqZgq'
 );
 
 export const getPayer = async () => {
@@ -88,11 +92,11 @@ export const getDataPda = () => {
   return dataPda;
 };
 
-export const getTokenAccount = async (owner, isPda = false) =>
+export const getTokenAccount = async (owner, isPda = false, mint = tokenMint) =>
   await getOrCreateAssociatedTokenAccount(
     getConnection(),
     await getPayer(),
-    tokenMint,
+    mint,
     owner,
     isPda
   );
