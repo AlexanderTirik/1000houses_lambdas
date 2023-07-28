@@ -12,7 +12,7 @@ const payerPublicKey = new web3.PublicKey(
 );
 
 export const stakeProgramAdress = new web3.PublicKey(
-  'HcKTgUbL976hsP7ie2LYLC92DFWcE6z4LSnjshC6hgcF'
+  '3A6KoMNEqphcqdLJvifU2dxWxbkQVpFWZgRCjGGpt776'
 );
 
 const tokenKeeperProgramAdress = new web3.PublicKey(
